@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    background: rgb(255,60,0);
+    background: radial-gradient(circle, #ff3c00 0%, #ff3c00 79%, #1c1c1c 79%, #1c1c1c 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.fecha span {
+    font-weight: 600;
+}
+
+.cuenta-atras {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.grupo {
+    line-height: 1;
+}
+
+.grande {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+}
+.by {
+    position: absolute; /* Hace que el texto se coloque en la parte inferior */
+    bottom: 20px; /* Coloca el texto 20px desde el borde inferior de la página */
+    left: 50%; /* Mueve el texto al centro horizontal */
+    transform: translateX(-50%); /* Ajuste para centrar el texto */
+    font-size: 3vw; /* Tamaño de fuente adaptable al tamaño de la pantalla */
+    color: rgb(191, 209, 88); /* Color del texto */
+    text-align: center; /* Centra el texto dentro de su contenedor */
+    font-family: "Bricolage Grotesque", sans-serif; /* Fuente */
+    font-weight: 200; /* Peso de la fuente */
+
+}
+.feliz-anio {
+    display: none; /* Ocultar el mensaje por defecto */
+    font-size: 10vw;
+    font-weight: 700;
+    color: black;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que las partículas queden detrás del contenido */
+}
+
+/* Responsividad */
+@media (max-width: 550px) {
+    .cuenta-atras {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 350px) {
+    .cuenta-atras {
+        display: flex;
+        flex-direction: column;
+    }
+}
